@@ -1,0 +1,138 @@
+/* Author profile styling */
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 200px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.author__avatar img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+.author__content {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+  font-size: 0.9em;
+}
+
+.author__name {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.contact-list {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5em;
+}
+
+.contact-list li {
+  margin: 2px 0;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8em;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Research highlights styling */
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.3em;
+}
+
+/* News section styling */
+#news + div {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+#news + div ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#news + div li {
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+/* Publications styling */
+#publications + p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Table styling for education and work experience */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table td {
+  padding: 8px 5px;
+  vertical-align: top;
+}
+
+/* General link styling */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Font awesome icons */
+.fa, .fas, .fab, .far {
+  margin-right: 5px;
+}

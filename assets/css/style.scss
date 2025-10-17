@@ -1,0 +1,192 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Override minima theme variables BEFORE importing
+$base-font-size:   15px !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+
+@import "minima";
+
+/* Custom styles for academic website */
+
+/* Author profile styling */
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 180px;
+  height: auto;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+.author__avatar img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+.author__content {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 90px;
+  font-size: 0.9em;
+}
+
+.author__name {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.contact-list {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1em;
+}
+
+.contact-list li {
+  margin: 2px 0;
+}
+
+.author__content p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Additional body styling */
+body {
+  line-height: 1.5;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post {
+  box-shadow: none;
+  border: none;
+}
+
+.post-content {
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+.post-content p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.post-content h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-bottom: 8px;
+  font-size: 1.8em;
+}
+
+/* Increase heading sizes */
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.1em; }
+
+/* Ensure all text elements inherit larger font size */
+p, li, span, a, td, th {
+  font-size: inherit;
+}
+
+/* Make sure tables use larger font */
+table {
+  font-size: 1em;
+}
+
+/* List items */
+ul, ol {
+  font-size: 1em;
+}
+
+/* Links */
+a {
+  font-size: inherit;
+}
+
+/* Keep all links the same color, even when visited */
+.author__content a:visited {
+  color: #2a7ae2; /* Same as unvisited link color */
+}
+
+/* News section font size should match body text */
+#news + div {
+  font-size: 1em;
+}
+
+#news + div ul {
+  font-size: 1em;
+}
+
+#news + div li {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Override minima styles */
+.site-header {
+  display: none;
+}
+
+.site-footer {
+  display: none;
+}
+
+.page-content {
+  padding: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 15px;
+  }
+  
+  .author__avatar img {
+    width: 120px;
+  }
+  
+  .author__content {
+    padding-left: 10px;
+    font-size: 1em;
+  }
+  
+  table {
+    font-size: 0.9em;
+  }
+  
+  .tooltip {
+    position: static;
+    display: inline;
+  }
+  
+  .tooltip .tooltiptext {
+    display: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .tooltip .tooltiptext {
+    display: none;
+  }
+  
+  #news + div {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
