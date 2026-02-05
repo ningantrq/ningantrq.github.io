@@ -186,7 +186,7 @@
           </ul>
           <p><span style="color: #cc6600;"><strong>Heterogeneous GPU Inference Scheduling System:</strong></span></p>
           <ul>
-            <li><a href="">HSGS</a> is a scheduling system with a unified abstraction for spatio-temporal GPU sharing, enabling compatibility
+            <li><a href="">UniSlice</a> is a scheduling system with a unified abstraction for spatio-temporal GPU sharing, enabling compatibility
 across any sliceable GPU, regardless of its manufacturers.</li>
           </ul>
         </div>
@@ -231,6 +231,21 @@ Power Sources</a></strong><br />
   year={2025}
 } -->
       <!-- </div> -->
+
+            <p><strong><a href="">UniSlice: Unified and Adaptive Scheduling for
+Efficient Inference in Heterogeneous GPU Clusters</a></strong><br />
+        Zijun Zhu, <strong>Ning An</strong>, Haokai Gong, Ruiting Zhou, Wenxiao Liu, Wentao Liu, Kun Tian, Wei Wang, Renwei Li and Liang Du<br />
+        <span style="color:gray"><i>Under Review</i></span>
+        <!-- <a href="javascript:void(0)" onclick="toggleAbstract('ctx-abs')">[abs]</a> -->
+        <!-- <a href="javascript:void(0)" onclick="toggleBib('ctx-bib')">[bib]</a> | -->
+        <!-- <a href="assets/files/NingAn_CV.pdf"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i></a> -->
+      </p>
+
+      <div id="ctx-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">
+        Efficient inference over heterogeneous GPU clusters requires jointly optimizing spatial resource partitioning and temporal batching under dynamic workloads, which constitutes a challenging online optimization problem. Existing systems are tightly coupled to vendor-specific slicing mechanisms and rely on rigid SLO-driven heuristics, limiting scalability and adaptability across diverse hardware platforms.
+                In this paper, we formulate heterogeneous GPU scheduling as a joint spatio–temporal allocation and batching optimization problem aimed at minimizing average job completion time (JCT). We design UniSlice, a unified and adaptive scheduling framework that implements a low-overhead online greedy algorithm based on coarse-grained latency prediction. UniSlice introduces a vendor-agnostic resource abstraction that unifies heterogeneous sharing mechanisms, and a hierarchical control architecture combining global slice allocation with decentralized adaptive batching. This design enables fast scheduling decisions with theoretical constant-factor performance guarantees while remaining robust to prediction errors.
+                We implement UniSlice on heterogeneous clusters of up to 32 cards using NVIDIA MIG/MPS and Huawei AVI GPUs and conduct extensive evaluations under balanced and imbalanced workloads. Experimental results show that UniSlice reduces average JCT by up to 77.7\% and decreases SLO violation rates by over 50\% compared with state-of-the-art baselines, while achieving microsecond-level scheduling overhead and strong scalability.
+      </div>
 
         <p><strong><a href="">CTx: A Concurrent Transmitter for
 Heterogeneous IoT Communication</a></strong><br />
